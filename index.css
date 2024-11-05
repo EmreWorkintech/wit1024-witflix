@@ -40,7 +40,7 @@ header .user-panel {
     align-items: center;
     gap: .5rem;
     flex:1;
-    justify-content: flex-end;;
+    justify-content: flex-end;
 }
 
 .user-panel input {
@@ -59,6 +59,9 @@ header .user-panel {
     width: 2.5rem;
 }
 
+.nav-menu {
+    display: none;
+}
 /* hero */
 main {
     aspect-ratio: 5/3;
@@ -139,7 +142,7 @@ button i {
 
 .movie-card {
     border: 1px solid black;
-    width: 250px;
+    min-width: 250px;
     border-radius: .5rem;
     padding: 2rem 1rem;
     display: flex;
@@ -198,4 +201,46 @@ footer h5 {
 
 .mobile-app-navigation img {
     height: 2rem
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    header .user-panel {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+
+    .main-movie {
+        width: 100%;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    footer nav {
+        justify-content: center;
+    }
+
+    .social-navigation, .mobile-app-navigation {
+        width: 100%;
+    }
+
+
+
 }
